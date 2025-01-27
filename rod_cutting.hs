@@ -11,7 +11,6 @@ lmax [x] = x
 lmax (x:xs) = foldl max' x xs
 
 rod _ 0 = 0
-rod (x:xs) 1 = x
 rod xs n = lmax [xs!!(i - 1) + (rod xs (n - i)) | i <- [1..n]]
 
 r :: Int -> Int
